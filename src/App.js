@@ -1,10 +1,15 @@
+import { DndProvider } from 'react-dnd';
 import './App.css';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div className="App">
-      <p>hello</p>
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <main>
+        <Home />
+      </main>
+    </DndProvider>
   );
 }
 
